@@ -1,0 +1,79 @@
+body{
+    align-items: center;
+    justify-items: center;
+    margin: 150px;
+}
+.scena{
+    height: 10em;
+    width: 10em;
+    perspective: 30em;
+}
+
+.cube{
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    width: 100%;
+    animation: rotate-cube 6s infinite linear;
+}
+@keyframes rotate-cube{
+    0%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+.cube > * {
+    border: 0.25em solid #000;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.front{
+    background-color:red ;
+}
+
+.back{
+    background-color: blue;
+}
+
+.left{
+    background-color: green;
+}
+
+.right{
+    background-color: yellow;
+}
+
+.top{
+    background-color:rgb(250, 7, 177) ;
+}
+
+.bottom{
+    background-color: orange;
+}
+
+.front{
+    transform: rotateY(0deg) translateZ(5em) ;
+}
+
+.back{
+    transform: rotateY(180deg) translateZ(5em) ;
+}
+
+.left{
+    transform: rotateY(-90deg) translateZ(5em) ;
+}
+
+.right{
+    transform: rotateY(90deg) translateZ(5em) ;
+}
+
+.top{
+    transform: rotateX(90deg) translateZ(5em) ;
+}
+
+.bottom{
+    transform: rotateX(-90deg) translateZ(5em) ;
+}
